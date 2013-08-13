@@ -368,7 +368,6 @@
           oldArrowLayer        = oldHelperLayer.querySelector('.introjs-arrow'),
           oldtooltipContainer  = oldHelperLayer.querySelector('.introjs-tooltip'),
           skipTooltipButton    = oldHelperLayer.querySelector('.introjs-skipbutton'),
-          prevTooltipButton    = oldHelperLayer.querySelector('.introjs-prevbutton'),
           nextTooltipButton    = oldHelperLayer.querySelector('.introjs-nextbutton');
 
       //hide the tooltip
@@ -447,16 +446,7 @@
       nextTooltipButton.innerHTML = this._options.nextLabel;
 
       //previous button
-      var prevTooltipButton = document.createElement('a');
 
-      prevTooltipButton.onclick = function() {
-        if(self._currentStep != 0) {
-          _previousStep.call(self);
-        }
-      };
-
-      prevTooltipButton.href = 'javascript:void(0);';
-      prevTooltipButton.innerHTML = this._options.prevLabel;
 
       //skip button
       var skipTooltipButton = document.createElement('a');
@@ -481,7 +471,6 @@
 
       //in order to prevent displaying next/previous button always
       if (this._introItems.length > 1) {
-        tooltipButtonsLayer.appendChild(prevTooltipButton);
         tooltipButtonsLayer.appendChild(nextTooltipButton);
       }
 
@@ -490,15 +479,12 @@
     }
 
     if (this._currentStep == 0) {
-      prevTooltipButton.className = 'introjs-button introjs-prevbutton introjs-disabled';
       nextTooltipButton.className = 'introjs-button introjs-nextbutton';
       skipTooltipButton.innerHTML = this._options.skipLabel;
     } else if (this._introItems.length - 1 == this._currentStep) {
       skipTooltipButton.innerHTML = this._options.doneLabel;
-      prevTooltipButton.className = 'introjs-button introjs-prevbutton';
       nextTooltipButton.className = 'introjs-button introjs-nextbutton introjs-disabled';
     } else {
-      prevTooltipButton.className = 'introjs-button introjs-prevbutton';
       nextTooltipButton.className = 'introjs-button introjs-nextbutton';
       skipTooltipButton.innerHTML = this._options.skipLabel;
     }

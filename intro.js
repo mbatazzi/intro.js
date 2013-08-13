@@ -19,7 +19,7 @@
   }
 } (this, function (exports) {
   //Default config/variables
-  var VERSION = '0.5.0';
+  var VERSION = '0.5.0-wfu';
 
   /**
    * IntroJs main class

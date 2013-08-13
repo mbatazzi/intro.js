@@ -304,22 +304,22 @@
       case 'top':
         tooltipLayer.style.left = '15px';
         tooltipLayer.style.top = '-' + (_getOffset(tooltipLayer).height + 10) + 'px';
-        arrowLayer.className = 'introjs-arrow bottom';
+        $('.introjs-arrow').parent('.introjs-tooltip').addClass('bottom');
         break;
       case 'right':
         tooltipLayer.style.left = (_getOffset(targetElement).width + 20) + 'px';
-        arrowLayer.className = 'introjs-arrow left';
+        $('.introjs-arrow').parent('.introjs-tooltip').addClass('left');
         break;
       case 'left':
         tooltipLayer.style.top = '15px';
         tooltipLayer.style.right = (_getOffset(targetElement).width + 20) + 'px';
-        arrowLayer.className = 'introjs-arrow right';
+        $('.introjs-arrow').parent('.introjs-tooltip').addClass('right');
         break;
       case 'bottom':
       // Bottom going to follow the default behavior
       default:
         tooltipLayer.style.bottom = '-' + (_getOffset(tooltipLayer).height + 10) + 'px';
-        arrowLayer.className = 'introjs-arrow top';
+        $('.introjs-arrow').parent('.introjs-tooltip').addClass('top');
         break;
     }
   }

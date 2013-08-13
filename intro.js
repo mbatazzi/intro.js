@@ -1,5 +1,6 @@
 /**
- * Intro.js v0.5.0
+ * Special build for WFU: Removed the previous button and changed the way we handle the arrow around the tooltip container
+ * Intro.js v0.5.0-wfu
  * https://github.com/usablica/intro.js
  * MIT licensed
  *
